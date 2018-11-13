@@ -31,7 +31,6 @@ public class AnimationController : MonoBehaviour {
 
 	protected IEnumerator DelayPlay (Animation animation, float times){
 		yield return new WaitForSeconds(times);
-		//Debug.Log ("延时----->"+times);
 		animation.animationObject.SetActive (true);
 		Animator animator = animation.animationObject.GetComponent<Animator> ();
 		animator.Play ("appear");

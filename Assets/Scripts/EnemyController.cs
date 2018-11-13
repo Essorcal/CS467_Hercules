@@ -138,7 +138,7 @@ public class EnemyController : MonoBehaviour {
 
         if(Vector3.Distance(enemies[i].transform.position, playerLoc) <= attackDistance && enemyList[i].attackTimer <= 0)
         {
-            enemyList[i].anim.SetTrigger("attack");
+            enemyList[i].anim.SetTrigger("attack");            
             enemyList[i].attackTimer = attackCooldown;          //Reset the attack timer
         }
         else if(Vector3.Distance(enemies[i].transform.position, playerLoc) <= attackDistance && enemyList[i].attackTimer > 0)

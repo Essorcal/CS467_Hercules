@@ -27,6 +27,14 @@ public class PlayerControllerScript : MonoBehaviour
     public SimpleHealthBar healthBar;
     public SimpleHealthBar sanityBar;
 
+    private GameObject _instance;
+
+    public GameObject sanityUp;
+    public GameObject attacked;
+
+    private Animation maxAnimation;
+    public float delay = 0f;
+
     void Start()
     {
         if (GameController.control.characterSelect == 1)
@@ -50,7 +58,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+        void FixedUpdate()
     {
         if (!isAlive) { return; }
         move = Vector2.zero;
@@ -62,6 +70,12 @@ public class PlayerControllerScript : MonoBehaviour
             anim.SetTrigger(action);
             attacking = true;
             attackTimeCounter = attackTime;
+        }
+
+        if (Input.GetKeyDown("q"))
+        {
+            _instance = Instantiate(sanityUp, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+            Destroy(_instance, _instance.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
         }
 
         if (attackTimeCounter > 0)
@@ -111,9 +125,7 @@ public class PlayerControllerScript : MonoBehaviour
             isAlive = false;
             playerMoving = false;
             int speed = 0;
-
             
-
             //TODO: Fix terrible Spaghetti code
             anim.SetFloat("lastVert", speed);
             anim.SetFloat("lastHorz", speed);
@@ -124,9 +136,17 @@ public class PlayerControllerScript : MonoBehaviour
             rigidbody2D.velocity = new Vector2(speed, speed);
           
             anim.SetTrigger("Dying");
-            
 
+            return true;
+        }
+        return false;
+    }
 
+    public bool Attacked()
+    {
+        if (bodycollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        {
+            Debug.Log("Attacked");
             return true;
         }
         return false;
@@ -151,4 +171,3 @@ public class PlayerControllerScript : MonoBehaviour
         anim.SetFloat("lastHorz", lastParams.y);      //lastHorz variable in the animator controller to move.y
     }
 }
-
