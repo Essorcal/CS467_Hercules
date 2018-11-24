@@ -46,13 +46,6 @@ public void SpawnWave()
         Spawn spawnPoint = selectRandomSpawn();
         GameObject enemy = Instantiate(selectRandomEnemy(), spawnPoint.transform.position, Quaternion.identity);
         enemy.GetComponent<NPCController>().currentWaypoint = findClosestWayPoint(enemy.transform);
-
-        CharacterStats stats = enemy.GetComponent<CharacterStats>();
-        EnemyWave cur = Waves[currentWave];
-
-        stats.SetInitialHP(cur.EnemyHealth);
-        stats.SetInitialDamage(cur.EnemyDamage);
-
     }
 }
     public void OnEnemyDeath()

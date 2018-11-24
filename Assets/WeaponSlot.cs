@@ -14,8 +14,15 @@ public class WeaponSlot : MonoBehaviour {
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void PullTrigger(Collider2D collision)
     {
-        
+        GameObject colObject = collision.gameObject;
+        CharacterStats_SO stats;
+
+        if (colObject.tag == "Player" || colObject.tag == "Enemy")
+        {
+            stats = colObject.GetComponent<CharacterStats>().characterDefinition_Template;
+            print(collision.gameObject.GetComponent<CharacterStats>().characterDefinition_Template.currentHealth);
+        }
     }
 }

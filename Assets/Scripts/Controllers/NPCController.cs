@@ -4,18 +4,19 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class NPCController : MonoBehaviour {
+public class NPCController : MonoBehaviour
+{
 
     public float patrolTime = 5; // time in seconds to wait before seeking a new patrol destination
-    public float aggroRange = 3; 
+    public float aggroRange = 3;
 
     public AudioClip spellAudio;
     public Events.EventEnemyDeath OnEnemyDeath;
- 
+
     Rigidbody2D body;
     CapsuleCollider2D bodyCollider;
 
-//Control movement 
+    //Control movement 
     Transform playerTransform;
     private Animator animator;
     bool aggro = false;
@@ -37,22 +38,24 @@ public class NPCController : MonoBehaviour {
     float speed, enemySpeed;
     public float runSpeedMultiplier = 1.05f;
     //public float maxSpeed = 1f; //The fastest the enemy can run
-    private float lastAttack;
-    private bool playerAlive, attackOnCooldown;
+    private float lastAttack, enemyMoveTimer;
+    private bool playerAlive, attackOnCooldown, walking, newVector;
     public float attackDistance = 1.25f; //The furthest the enemy can be before they will attack
 
-    private void Awake()    
+    private void Awake()
     {
+        enemyMoveTimer = 0;
+        walking = newVector = true;
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         bodyCollider = GetComponent<CapsuleCollider2D>();
 
-        playerTransform= GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         EnemyManager enemyManager = FindObjectOfType<EnemyManager>();
-        if (enemyManager != null) 
+        if (enemyManager != null)
             OnEnemyDeath.AddListener(enemyManager.OnEnemyDeath);
-        
+
         InvokeRepeating("Tick", Random.Range(0, 1), 0.5f);
 
         lastAttack = float.MinValue;
@@ -69,7 +72,10 @@ public class NPCController : MonoBehaviour {
     void Update()
     {
         float timeSinceLastAttack = Time.time - lastAttack;
-        attackOnCooldown = timeSinceLastAttack > attack.Cooldown;  
+        attackOnCooldown = timeSinceLastAttack > attack.Cooldown;
+
+        SetTimer();
+        enemyMoveTimer -= Time.deltaTime;
     }
 
     public void useAttack()
@@ -80,13 +86,13 @@ public class NPCController : MonoBehaviour {
         {
             return;
             //((Weapon)attack).Swing(gameObject, playerTransform.gameObject);
-        } 
-       // else if (attack is Spell) 
-       // {
-            return; //TODO
-      //  }
+        }
+        // else if (attack is Spell) 
+        // {
+        return; //TODO
+                //  }
     }
-    
+
     void Patrol()
     {
         currentWaypoint = currentWaypoint.Next;
@@ -102,7 +108,14 @@ public class NPCController : MonoBehaviour {
         }
         else
         {
-            MoveToWaypoint();   //Move to the current waypoint;
+            if (currentWaypoint == null)
+            {
+                RoamArea();
+            }
+            else
+            {
+                MoveToWaypoint();   //Move to the current waypoint;
+            }
         }
 
     }
@@ -114,7 +127,7 @@ public class NPCController : MonoBehaviour {
         lastMove.x = move.x = waypointVector.x;
         lastMove.y = move.y = waypointVector.y;
 
- 
+
         if (Vector3.Distance(transform.position, currentWaypoint.transform.position) < 2)       //If the NPC has reached the waypoint invoke a countdown to get the next waypoint
         {
             body.velocity = new Vector2(0, 0);
@@ -180,6 +193,44 @@ public class NPCController : MonoBehaviour {
     }
 
 
+    void RoamArea()
+    {
+        if (walking)
+        {
+            if (newVector)     //A new vector is only needed once per walk cycle
+            {
+                lastMove.x = move.x = Mathf.Lerp(-1, 1, Random.Range(0, 1.0f));       //Interpolate between -1 and 1 by some random value from 0-1
+                lastMove.y = move.y = Mathf.Lerp(-1, 1, Random.Range(0, 1.0f));
+                newVector = false;                                                                 //Enemy now has a vector to move along during his move time
+            }
+            EnemyMoving();     //Set anim variables for moving
+
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move.x, move.y);        //Move the enemy along their walk vector
+        }
+        else
+        {
+            EnemyStopped();    //Set anim variables for being stopped
+        }
+    }
+
+
+
+    //If the enemy is waiting then wait for a random time between 2 to 4 seconds
+    //If the enemy is walking, walk for a random amount of time between 1 and 3 seconds
+    void SetTimer()
+    {
+        if (enemyMoveTimer <= 0 && walking == false)      //The enemy has finished the wait cycle and now needs time walking
+        {
+            enemyMoveTimer = (float)(Random.Range(1, 4));        //Time Walking
+            walking = true;
+        }
+        else if (enemyMoveTimer <= 0 && walking == true)   //The enemy has finished the walk cycle and now needs time waiting
+        {
+            enemyMoveTimer = (float)(Random.Range(2, 5));      //Time Waiting
+            walking = false;
+            newVector = true;
+        }
+    }
 }
 
 

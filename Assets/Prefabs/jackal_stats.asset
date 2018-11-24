@@ -42,8 +42,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   isPlayer: 0
-  maxHealth: 0
-  currentHealth: 0
+  maxHealth: 15
+  currentHealth: 11
   maxGems: 0
   currentGems: 0
   maxSanity: 0

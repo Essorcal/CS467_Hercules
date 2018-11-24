@@ -78,10 +78,10 @@ public class GameController : MonoBehaviour {
         //{ 
             EnemyController.GetComponent<EnemyController>().MoveEnemies(player.transform.position);
 
-            if (!playerController.GetComponent<PlayerControllerScript>().isAlive)
-            {
-                playerController.GetComponent<PlayerControllerScript>().enabled = false;
-            }
+            //if (!playerController.GetComponent<PlayerControllerScript>().isAlive)
+            //{
+                //playerController.GetComponent<PlayerControllerScript>().enabled = false;
+            //}
        // }
     }
 

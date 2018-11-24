@@ -113,7 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &78129506
+--- !u!1001 &425869531
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -152,6 +152,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114620788672660926, guid: 7c814b012e4759a4d961428765074278,
+        type: 2}
+      propertyPath: attack
+      value: 
+      objectReference: {fileID: 11400000, guid: d0838b5600a8d7f43b291ff40cf797d8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c814b012e4759a4d961428765074278, type: 2}
   m_IsPrefabAsset: 0
@@ -349,7 +355,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 780455234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6151668, y: -0.53589845, z: -10}
+  m_LocalPosition: {x: 0.6882405, y: -0.53589845, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 960780724}
@@ -677,7 +683,7 @@ MonoBehaviour:
   maxSpeed: 3
   attackTime: 2
   isAlive: 1
-  currentWeapon: {fileID: 11400000, guid: e6198da92bee08043bf266ca91f6093b, type: 2}
+  currentWeapon: {fileID: 0}
   healthBar: {fileID: 0}
   sanityBar: {fileID: 0}
 --- !u!114 &987839937

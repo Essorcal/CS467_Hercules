@@ -5,19 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon.asset", menuName = "Attack/Weapon")]
 public class Weapon : AttackSystem
 {
-    public Rigidbody2D weaponPreb;
+    public GameObject weaponPreb;
 
     public void ExecuteAttack(GameObject attacker, GameObject defender)
     {
         if (defender == null)
-            return;
-
-        // Check if defender is in range of the attacker
-        if (Vector3.Distance(attacker.transform.position, defender.transform.position) > Range)
-            return;
-
-        // Check if defender is in front of the player
-        if (!attacker.transform.IsFacingTarget(defender.transform))
             return;
 
         // at this point the attack will connect

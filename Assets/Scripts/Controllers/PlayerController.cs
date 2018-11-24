@@ -11,17 +11,19 @@ public class PlayerController : MonoBehaviour
     public float runMultiplier = 2f;
     public float maxSpeed = 3f;
     public float attackTime = 2f;
+    public bool isAlive = true;
+    public Weapon currentWeapon;
 
     protected bool playerMoving, attacking;
     protected float attackTimeCounter;
+    protected GameObject attackTarget;
+
+    private GameObject weaponSlot;
+
     Rigidbody2D body;
     CapsuleCollider2D bodycollider;
     Vector2 move, lastMove;
-
-    protected GameObject attackTarget;
-    public bool isAlive = true;
     CharacterStats stats;
-
     Animator anim;
 
     
@@ -32,8 +34,7 @@ public class PlayerController : MonoBehaviour
 
         bodycollider = GetComponent<CapsuleCollider2D>();
         body = GetComponent<Rigidbody2D>();
-        stats = GetComponent<CharacterStats>();
-       
+        stats = GetComponent<CharacterStats>(); 
     }
 
     /// CALEB ADDED
@@ -59,16 +60,16 @@ public class PlayerController : MonoBehaviour
         move = Vector2.zero;
         playerMoving = false;
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown("space"))
         {
             Attack("slashAttack", 2.0f);
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*
+        if (Input.GetKeyDown("space"))
         {
             Attack("thrustAttack", 1.0f);
         }
-
+        */
 
         Move();
 
@@ -82,6 +83,8 @@ public class PlayerController : MonoBehaviour
         {
             StopAllCoroutines();
         }
+
+
         anim.SetBool("attacking", true);
         anim.SetTrigger(attackType);
         attacking = true;
@@ -103,7 +106,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey("left shift") || Input.GetKey("right shift"))  //Add the running multiplier
         {
-            Debug.Log("Running now.\n");
             maxSpeed = 2 * runMultiplier;
             anim.speed = 2F;                        //Increase the animation speed for running
         }
