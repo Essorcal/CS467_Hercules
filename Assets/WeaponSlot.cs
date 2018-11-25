@@ -13,7 +13,10 @@ public class WeaponSlot : MonoBehaviour {
 
 
     void Start () {
-        Instantiate(currentWeapon.weaponPreb, new Vector3(0,0,0), Quaternion.identity, gameObject.transform);   //Instantiate the weapon prefab  
+        currentWeapon.weaponPreb.transform.position = new Vector3(0, 0, 0);
+        currentWeapon.weaponPreb.transform.rotation = Quaternion.identity;
+        Instantiate(currentWeapon.weaponPreb, gameObject.transform, false);
+        gameObject.SetActive(false);
     }
 
     void Update()
@@ -36,7 +39,7 @@ public class WeaponSlot : MonoBehaviour {
 
             attackCreated = currentWeapon.ExecuteAttack(player);        //Create a new attack for this collision with the current player
 
-            print("did " + attackCreated.Damage + " damage to " + colObject.name);
+            print(gameObject.name + " did " + attackCreated.Damage + " damage to " + colObject.name);
 
             stats = colObject.GetComponent<EnemyStats>().characterDefinition;
             stats.TakeDamage(attackCreated.Damage);

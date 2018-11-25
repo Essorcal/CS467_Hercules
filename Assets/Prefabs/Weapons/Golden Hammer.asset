@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8861f1f73741447e9d1e43208b509f2, type: 3}
+  m_Name: Golden Hammer
+  m_EditorClassIdentifier: 
+  Cooldown: 1.5
+  minDamage: 12
+  maxDamage: 15
+  critMult: 1.5
+  critChance: 0.3
+  weaponPreb: {fileID: 1404802127929412, guid: 127983031ab71d04f81129ca10dbffe1, type: 2}

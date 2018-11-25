@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Name: jackal_attack
   m_EditorClassIdentifier: 
   Cooldown: 3
-  Range: 0
-  minDamage: 0
-  maxDamage: 0
+  minDamage: 2
+  maxDamage: 5
   critMult: 0
   critChance: 0

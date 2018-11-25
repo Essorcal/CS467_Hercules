@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8861f1f73741447e9d1e43208b509f2, type: 3}
+  m_Name: Bioquaker
+  m_EditorClassIdentifier: 
+  Cooldown: 1
+  minDamage: 4
+  maxDamage: 7
+  critMult: 1.35
+  critChance: 0.3
+  weaponPreb: {fileID: 1483163083547240, guid: 01b54ad5302a3784b89b0c8427a980ea, type: 2}

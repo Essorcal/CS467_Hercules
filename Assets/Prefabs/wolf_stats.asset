@@ -43,7 +43,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   isPlayer: 0
   maxHealth: 0
-  currentHealth: 0
+  currentHealth: 15
   maxGems: 0
   currentGems: 0
   maxSanity: 0

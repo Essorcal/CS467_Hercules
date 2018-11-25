@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8861f1f73741447e9d1e43208b509f2, type: 3}
+  m_Name: Astrobeamer
+  m_EditorClassIdentifier: 
+  Cooldown: 1
+  minDamage: 3
+  maxDamage: 7
+  critMult: 1.3
+  critChance: 0.3
+  weaponPreb: {fileID: 1266912957800410, guid: 36aaefd5ada726943b325e98087c3208, type: 2}

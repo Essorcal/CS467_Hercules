@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8861f1f73741447e9d1e43208b509f2, type: 3}
+  m_Name: Boltholder
+  m_EditorClassIdentifier: 
+  Cooldown: 2
+  minDamage: 7
+  maxDamage: 12
+  critMult: 1.4
+  critChance: 0.35
+  weaponPreb: {fileID: 1715473120729352, guid: 26222790932b58a4aaea71c46a4a12f2, type: 2}

@@ -8,6 +8,8 @@ AnimatorOverrideController:
   m_Name: Alien
   m_Controller: {fileID: 9100000, guid: 2f3372d73d74f37488200810f5c5d50d, type: 2}
   m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c9cf5d2bb48180a43840cbf81971d550, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c9cf5d2bb48180a43840cbf81971d550, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: ffe4a21db29a309489123d323af71402, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: c9cf5d2bb48180a43840cbf81971d550, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 8ecf910b014589b45a761906314d0d80, type: 2}

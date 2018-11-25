@@ -100,7 +100,7 @@ public class NPCController : MonoBehaviour
 
             attackCreated = attack.CreateAttack(gameObject.GetComponent<EnemyStats>().characterDefinition);        //Create a new attack for this collision with the current player
 
-            print("did " + attackCreated.Damage + " damage to " + colObject.name);
+            print(gameObject.name + " did " + attackCreated.Damage + " damage to " + colObject.name);
 
             stats = colObject.GetComponent<CharacterStats>().characterDefinition;
             stats.TakeDamage(attackCreated.Damage);

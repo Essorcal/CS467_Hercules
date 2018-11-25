@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8861f1f73741447e9d1e43208b509f2, type: 3}
+  m_Name: Planeaxe
+  m_EditorClassIdentifier: 
+  Cooldown: 4
+  minDamage: 14
+  maxDamage: 25
+  critMult: 1.5
+  critChance: 0.35
+  weaponPreb: {fileID: 1343087862844578, guid: 9a6ccee5726713942bec46015dfae88c, type: 2}
