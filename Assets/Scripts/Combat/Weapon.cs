@@ -7,21 +7,14 @@ public class Weapon : AttackSystem
 {
     public GameObject weaponPreb;
 
-    public void ExecuteAttack(GameObject attacker, GameObject defender)
+    public Attack ExecuteAttack(GameObject attacker)
     {
-        if (defender == null)
-            return;
+        if (attacker == null)
+            return null;
 
-        // at this point the attack will connect
-        var attackerStats = attacker.GetComponent<CharacterStats>();
-        var defenderStats = defender.GetComponent<CharacterStats>();
+        var attackerStats = attacker.GetComponent<CharacterStats>().characterDefinition;
 
-        var attack = CreateAttack(attackerStats, defenderStats);
-
-        var attackables = defender.GetComponentsInChildren(typeof(IAttackable));
-        foreach (IAttackable a in attackables)
-        {
-            a.OnAttack(attacker, attack);
-        }
+        var attack = CreateAttack(attackerStats);
+        return attack;
     }
 }

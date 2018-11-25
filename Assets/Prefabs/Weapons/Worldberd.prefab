@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4449909805909772}
   - component: {fileID: 212400929699034806}
   - component: {fileID: 60993809563213088}
+  - component: {fileID: 114390676878310750}
   m_Layer: 0
   m_Name: Worldberd
   m_TagString: Untagged
@@ -71,6 +72,17 @@ PolygonCollider2D:
       - {x: 0.15543039, y: 0.22029966}
       - {x: 0.1879216, y: 0.27010566}
       - {x: 0.15867752, y: 0.31810096}
+--- !u!114 &114390676878310750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1071921465108014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212400929699034806
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4976724152795158}
   - component: {fileID: 212314987130849228}
   - component: {fileID: 60247403841992890}
+  - component: {fileID: 114680405663512206}
   m_Layer: 0
   m_Name: Underchopper
   m_TagString: Untagged
@@ -72,6 +73,17 @@ PolygonCollider2D:
       - {x: 0.20296054, y: 0.20257217}
       - {x: 0.21803965, y: 0.2482968}
       - {x: 0.18283251, y: 0.28772983}
+--- !u!114 &114680405663512206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474635926570132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212314987130849228
 SpriteRenderer:
   m_ObjectHideFlags: 1

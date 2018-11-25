@@ -10,20 +10,20 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1.05f;
     public float runMultiplier = 2f;
     public float maxSpeed = 3f;
-    public float attackTime = 2f;
+    public float attackTime = 1f;
     public bool isAlive = true;
-    public Weapon currentWeapon;
+    public bool attacking;
 
-    protected bool playerMoving, attacking;
-    protected float attackTimeCounter;
+    protected bool playerMoving;
     protected GameObject attackTarget;
 
-    private GameObject weaponSlot;
+    public WeaponSlot weapon;
 
     Rigidbody2D body;
     CapsuleCollider2D bodycollider;
     Vector2 move, lastMove;
     CharacterStats stats;
+    CharacterStats_SO currentStats;
     Animator anim;
 
     
@@ -31,10 +31,11 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
-
+        weapon = GetComponentInChildren<WeaponSlot>();
+        weapon.player = gameObject;     //Set the weapon child's player member variable to this game object
         bodycollider = GetComponent<CapsuleCollider2D>();
         body = GetComponent<Rigidbody2D>();
-        stats = GetComponent<CharacterStats>(); 
+        stats = GetComponent<CharacterStats>();
     }
 
     /// CALEB ADDED
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
         stats.characterDefinition.OnPlayerInit.AddListener(GameManager.Instance.OnPlayerInit);
         */
         stats.characterDefinition.OnPlayerInit.Invoke();
+        currentStats = stats.characterDefinition;
 
     }
 
@@ -60,7 +62,7 @@ public class PlayerController : MonoBehaviour
         move = Vector2.zero;
         playerMoving = false;
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && !attacking)
         {
             Attack("slashAttack", 2.0f);
         }
@@ -76,10 +78,19 @@ public class PlayerController : MonoBehaviour
         Spikes();
     }
 
+    void Update()
+    {
+        if (currentStats.currentHealth <= 0 && isAlive)        //Once the Player is dead destroy the game object
+        {
+            StartCoroutine(playerDead());
+        }
+    }
+
+
     public void Attack(string attackType, float attackTime) 
     {
-        var weapon = stats.GetCurrentWeapon();
-        if (weapon != null)
+        var currentWeapon = stats.GetCurrentWeapon();
+        if (currentWeapon != null)
         {
             StopAllCoroutines();
         }
@@ -88,14 +99,16 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("attacking", true);
         anim.SetTrigger(attackType);
         attacking = true;
-        attackTimeCounter = attackTime;
+        weapon.isAttacking = true;
 
-        while (attackTimeCounter > 0) 
-        {
-            attackTimeCounter -= Time.deltaTime;
-        }
+        Invoke("NotAttacking", attackTime);
 
+    }
+
+    void NotAttacking()
+    {
         attacking = false;
+        weapon.isAttacking = false;
         anim.SetBool("attacking", false);
     }
 
@@ -155,14 +168,22 @@ public class PlayerController : MonoBehaviour
     {
         if (bodycollider.IsTouchingLayers(LayerMask.GetMask("Spikes")))
         {
-            isAlive = false;
-            playerMoving = false;
-            int speed = 0;           
-            anim.SetBool("playerMoving", playerMoving);
-            body.velocity = new Vector2(speed, speed);
-            anim.SetTrigger("Dying");            
+            currentStats.currentHealth = 0;
+            StartCoroutine(playerDead());
         }
         
+    }
+
+    IEnumerator playerDead()
+    {
+        isAlive = false;
+        playerMoving = false;
+        int speed = 0;
+        anim.SetBool("playerMoving", playerMoving);
+        body.velocity = new Vector2(speed, speed);
+        anim.SetTrigger("Dying");
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
     }
 
 }

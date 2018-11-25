@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a66dad34abdab4802bad4b206c7732b7, type: 3}
-  m_Name: PlayerStats
+  m_Name: skeleton_stats
   m_EditorClassIdentifier: 
   OnLevelUp:
     m_PersistentCalls:
@@ -41,29 +41,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  isPlayer: 1
-  maxHealth: 100
-  currentHealth: 100
-  maxGems: 100
+  isPlayer: 0
+  maxHealth: 0
+  currentHealth: 0
+  maxGems: 0
   currentGems: 0
-  maxSanity: 100
-  currentSanity: 100
-  baseDamage: 10
-  currentDamage: 10
-  maxInventory: 20
+  maxSanity: 0
+  currentSanity: 0
+  baseDamage: 0
+  currentDamage: 0
+  maxInventory: 0
   currentInventory: 0
   charExperience: 0
   charLevel: 0
-  charLevels:
-  - maxHealth: 100
-    maxSanity: 100
-    maxGems: 0
-    baseDamage: 10
-    maxInventory: 20
-    requiredXP: 100
-  - maxHealth: 100
-    maxSanity: 100
-    maxGems: 0
-    baseDamage: 12
-    maxInventory: 20
-    requiredXP: 200
+  charLevels: []

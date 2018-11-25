@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4870719528761478}
   - component: {fileID: 212541296356292236}
   - component: {fileID: 60133480822215510}
+  - component: {fileID: 114471438268085792}
   m_Layer: 0
   m_Name: Durendal
   m_TagString: Untagged
@@ -70,6 +71,17 @@ PolygonCollider2D:
       - {x: -0.116885945, y: 0.08875955}
       - {x: -0.09327513, y: 0.12631351}
       - {x: -0.27825052, y: 0.31819698}
+--- !u!114 &114471438268085792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1785304142493428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212541296356292236
 SpriteRenderer:
   m_ObjectHideFlags: 1

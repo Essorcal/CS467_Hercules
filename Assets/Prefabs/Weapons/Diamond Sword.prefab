@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4048784735970636}
   - component: {fileID: 212614997897596526}
   - component: {fileID: 60798032832027954}
+  - component: {fileID: 114569608322678544}
   m_Layer: 0
   m_Name: Diamond Sword
   m_TagString: Untagged
@@ -70,6 +71,17 @@ PolygonCollider2D:
       - {x: -0.101059064, y: 0.07374816}
       - {x: -0.078987755, y: 0.10914278}
       - {x: -0.29284936, y: 0.32135746}
+--- !u!114 &114569608322678544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618512400374402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212614997897596526
 SpriteRenderer:
   m_ObjectHideFlags: 1

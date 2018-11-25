@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4261812736218068}
   - component: {fileID: 212661711632329772}
   - component: {fileID: 60139934637307750}
+  - component: {fileID: 114891014805642312}
   m_Layer: 0
   m_Name: Longsword
   m_TagString: Untagged
@@ -71,6 +72,17 @@ PolygonCollider2D:
       - {x: -0.10986065, y: 0.090687424}
       - {x: -0.08941579, y: 0.11365369}
       - {x: -0.15658435, y: 0.18573716}
+--- !u!114 &114891014805642312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549435809619272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212661711632329772
 SpriteRenderer:
   m_ObjectHideFlags: 1

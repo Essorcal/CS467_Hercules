@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4735265180851256}
   - component: {fileID: 212759403328743220}
   - component: {fileID: 60190790090203400}
+  - component: {fileID: 114713940492704838}
   m_Layer: 0
   m_Name: Planeaxe
   m_TagString: Untagged
@@ -70,6 +71,17 @@ PolygonCollider2D:
       - {x: -0.13, y: 0.1}
       - {x: -0.08, y: 0.12}
       - {x: -0.16, y: 0.2}
+--- !u!114 &114713940492704838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1343087862844578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212759403328743220
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4784554615996346}
   - component: {fileID: 212494010003898422}
   - component: {fileID: 60491068892757152}
+  - component: {fileID: 114170183614791118}
   m_Layer: 0
   m_Name: Crimson Blade
   m_TagString: Untagged
@@ -70,6 +71,17 @@ PolygonCollider2D:
       - {x: -0.10634592, y: 0.07855746}
       - {x: -0.07864648, y: 0.117881924}
       - {x: -0.28400025, y: 0.32229275}
+--- !u!114 &114170183614791118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1094004970241286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212494010003898422
 SpriteRenderer:
   m_ObjectHideFlags: 1

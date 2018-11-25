@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4989072751913338}
   - component: {fileID: 212356793090729126}
   - component: {fileID: 60976180830972588}
+  - component: {fileID: 114927157182323804}
   m_Layer: 0
   m_Name: Astrobeamer
   m_TagString: Untagged
@@ -70,6 +71,17 @@ PolygonCollider2D:
       - {x: -0.28538606, y: 0.20663741}
       - {x: -0.205458, y: 0.29073307}
       - {x: -0.2307489, y: 0.3301856}
+--- !u!114 &114927157182323804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1266912957800410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212356793090729126
 SpriteRenderer:
   m_ObjectHideFlags: 1

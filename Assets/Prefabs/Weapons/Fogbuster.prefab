@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4871943171727276}
   - component: {fileID: 212158707471889944}
   - component: {fileID: 60793137096425442}
+  - component: {fileID: 114583627398315248}
   m_Layer: 0
   m_Name: Fogbuster
   m_TagString: Untagged
@@ -70,6 +71,17 @@ PolygonCollider2D:
       - {x: -0.11693272, y: 0.07727036}
       - {x: -0.083245054, y: 0.12370004}
       - {x: -0.26746127, y: 0.31764644}
+--- !u!114 &114583627398315248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207446328130934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212158707471889944
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Name: BasicSword
   m_EditorClassIdentifier: 
   Cooldown: 1
-  Range: 2
   minDamage: 2
   maxDamage: 4
-  critMult: 1
+  critMult: 1.5
   critChance: 0.2
   weaponPreb: {fileID: 1390070169599450, guid: 55c51070d3792974bb62c31142f47ad8, type: 2}

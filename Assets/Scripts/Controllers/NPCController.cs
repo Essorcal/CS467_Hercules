@@ -15,6 +15,8 @@ public class NPCController : MonoBehaviour
 
     Rigidbody2D body;
     CapsuleCollider2D bodyCollider;
+    CharacterStats_SO currentStats;
+    private Attack attackCreated;
 
     //Control movement 
     Transform playerTransform;
@@ -46,6 +48,7 @@ public class NPCController : MonoBehaviour
     {
         enemyMoveTimer = 0;
         walking = newVector = true;
+        currentStats = GetComponent<EnemyStats>().characterDefinition;
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         bodyCollider = GetComponent<CapsuleCollider2D>();
@@ -56,17 +59,10 @@ public class NPCController : MonoBehaviour
         if (enemyManager != null)
             OnEnemyDeath.AddListener(enemyManager.OnEnemyDeath);
 
-        InvokeRepeating("Tick", Random.Range(0, 1), 0.5f);
+        InvokeRepeating("Tick", Random.Range(0, 1), 0.5f);  //Call the Tick function repeatedly every 1/2 second
 
         lastAttack = float.MinValue;
         playerAlive = true;
-
-        //playerTransform.gameObject.GetComponent<DestroyedEvent>().IDied += PlayerDeath;   TODO
-    }
-
-    private void PlayerDeath()
-    {
-        playerAlive = false;
     }
 
     void Update()
@@ -76,21 +72,39 @@ public class NPCController : MonoBehaviour
 
         SetTimer();
         enemyMoveTimer -= Time.deltaTime;
+
+        if(currentStats.currentHealth <= 0 && playerAlive)        //Once the NPC is dead destroy it
+        {
+            playerAlive = false;
+            StartCoroutine(blinkyDeath(0.25f));
+        }
     }
 
-    public void useAttack()
+    IEnumerator blinkyDeath(float blinkTime)    //Blink 3 times and then destroy the NPC game object
     {
-        if (!playerAlive)
-            return;
-        if (attack is Weapon) //TODO
-        {
-            return;
-            //((Weapon)attack).Swing(gameObject, playerTransform.gameObject);
+        for (int i = 0; i < 6; i++)
+        { 
+            gameObject.GetComponent<SpriteRenderer>().enabled = !gameObject.GetComponent<SpriteRenderer>().enabled;
+            yield return new WaitForSeconds(blinkTime);
         }
-        // else if (attack is Spell) 
-        // {
-        return; //TODO
-                //  }
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject colObject = collision.gameObject;
+        CharacterStats_SO stats;
+
+        if (colObject.tag == "Player")
+        {
+
+            attackCreated = attack.CreateAttack(gameObject.GetComponent<EnemyStats>().characterDefinition);        //Create a new attack for this collision with the current player
+
+            print("did " + attackCreated.Damage + " damage to " + colObject.name);
+
+            stats = colObject.GetComponent<CharacterStats>().characterDefinition;
+            stats.TakeDamage(attackCreated.Damage);
+        }
     }
 
     void Patrol()
@@ -101,20 +115,23 @@ public class NPCController : MonoBehaviour
 
     void Tick()
     {
-        //Move enemies to waypoint unless player is near, then aggro
-        if (playerTransform != null && Vector3.Distance(transform.position, playerTransform.position) < aggroRange)
+        if (playerAlive)
         {
-            AggroPlayer(); //Move to player position
-        }
-        else
-        {
-            if (currentWaypoint == null)
+            //Move enemies to waypoint unless player is near, then aggro
+            if (playerTransform != null && Vector3.Distance(transform.position, playerTransform.position) < aggroRange)
             {
-                RoamArea();
+                AggroPlayer(); //Move to player position
             }
             else
             {
-                MoveToWaypoint();   //Move to the current waypoint;
+                if (currentWaypoint == null)      //No waypoints given, the NPC will roam their current area
+                {
+                    RoamArea();
+                }
+                else
+                {
+                    MoveToWaypoint();   //Move to the current waypoint;
+                }
             }
         }
 

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4809035530614102}
   - component: {fileID: 212656591031983668}
   - component: {fileID: 60946580065167126}
+  - component: {fileID: 114045866587274446}
   m_Layer: 0
   m_Name: Moonkris
   m_TagString: Untagged
@@ -74,6 +75,17 @@ PolygonCollider2D:
       - {x: -0.057917334, y: -0.09202212}
       - {x: -0.032817, y: -0.11168546}
       - {x: 0.083646536, y: 0.0024202242}
+--- !u!114 &114045866587274446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709322153398368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212656591031983668
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4247483063786432}
   - component: {fileID: 212141169520967452}
   - component: {fileID: 60290963599493718}
+  - component: {fileID: 114526236395621524}
   m_Layer: 0
   m_Name: Sunhunter
   m_TagString: Untagged
@@ -73,6 +74,17 @@ PolygonCollider2D:
       - {x: 0.13898343, y: 0.23063476}
       - {x: 0.17003943, y: 0.20574854}
       - {x: 0.22179948, y: 0.21902266}
+--- !u!114 &114526236395621524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381129994799382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212141169520967452
 SpriteRenderer:
   m_ObjectHideFlags: 1

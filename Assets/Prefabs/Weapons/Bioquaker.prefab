@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4001491357599950}
   - component: {fileID: 212840151982278424}
   - component: {fileID: 60091081489275436}
+  - component: {fileID: 114524418158083548}
   m_Layer: 0
   m_Name: Bioquaker
   m_TagString: Untagged
@@ -74,6 +75,17 @@ PolygonCollider2D:
       - {x: 0.22188564, y: 0.2593798}
       - {x: 0.15529978, y: 0.29386872}
       - {x: 0.11717458, y: 0.25514358}
+--- !u!114 &114524418158083548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483163083547240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212840151982278424
 SpriteRenderer:
   m_ObjectHideFlags: 1

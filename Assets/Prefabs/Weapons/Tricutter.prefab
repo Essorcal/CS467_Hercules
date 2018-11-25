@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4815359510356916}
   - component: {fileID: 212112330298798422}
   - component: {fileID: 60324170253988454}
+  - component: {fileID: 114804739286351008}
   m_Layer: 0
   m_Name: Tricutter
   m_TagString: Untagged
@@ -71,6 +72,17 @@ PolygonCollider2D:
       - {x: -0.10574384, y: 0.06874214}
       - {x: -0.07400819, y: 0.10443567}
       - {x: -0.28582618, y: 0.31150705}
+--- !u!114 &114804739286351008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318704874359138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212112330298798422
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 95418121520260336}
   - component: {fileID: 70630618628470530}
   - component: {fileID: 61685702924183222}
-  - component: {fileID: 114888022935412636}
-  - component: {fileID: 114630588785308914}
+  - component: {fileID: 114154794051108940}
+  - component: {fileID: 114356023035918314}
   m_Layer: 10
   m_Name: Jackal
   m_TagString: Enemy
@@ -124,7 +124,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114630588785308914
+--- !u!114 &114154794051108940
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1977740402492984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf08b5a6c5c784bd6b9fe009dd3c49ca, type: 3}
+  m_Script: {fileID: 11500000, guid: df05b33003d5a894f9dbb8a5013cb400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   patrolTime: 5
@@ -149,7 +149,7 @@ MonoBehaviour:
   currentWaypoint: {fileID: 0}
   runSpeedMultiplier: 1.05
   attackDistance: 1.25
---- !u!114 &114888022935412636
+--- !u!114 &114356023035918314
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,14 +157,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1977740402492984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cf1628cb05042dd9e0620576db056d, type: 3}
+  m_Script: {fileID: 11500000, guid: c628dc68deadd204e890812059f5ae51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterDefinition_Template: {fileID: 11400000, guid: acc58f219acb2ef4ba9dbbcfb93bc5d3,
     type: 2}
-  characterDefinition: {fileID: 11400000, guid: acc58f219acb2ef4ba9dbbcfb93bc5d3,
-    type: 2}
-  charInv: {fileID: 0}
+  characterDefinition: {fileID: 0}
   characterWeaponSlot: {fileID: 0}
 --- !u!212 &212197028053450212
 SpriteRenderer:

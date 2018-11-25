@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4866659954468654}
   - component: {fileID: 212364323242192550}
   - component: {fileID: 60751306972033654}
+  - component: {fileID: 114927541379015618}
   m_Layer: 0
   m_Name: Shocksaber
   m_TagString: Untagged
@@ -70,6 +71,17 @@ PolygonCollider2D:
       - {x: -0.12297098, y: 0.07915744}
       - {x: -0.07849723, y: 0.11875005}
       - {x: -0.26590848, y: 0.32212093}
+--- !u!114 &114927541379015618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1651666416276758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212364323242192550
 SpriteRenderer:
   m_ObjectHideFlags: 1

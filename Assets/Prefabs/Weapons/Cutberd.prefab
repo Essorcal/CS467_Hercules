@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4270596422641692}
   - component: {fileID: 212172489013014766}
   - component: {fileID: 60999075762962514}
+  - component: {fileID: 114450660967886080}
   m_Layer: 0
   m_Name: Cutberd
   m_TagString: Untagged
@@ -71,6 +72,17 @@ PolygonCollider2D:
       - {x: 0.14803858, y: 0.18092756}
       - {x: 0.20858319, y: 0.1949683}
       - {x: 0.21364678, y: 0.25144163}
+--- !u!114 &114450660967886080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330691823840704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212172489013014766
 SpriteRenderer:
   m_ObjectHideFlags: 1

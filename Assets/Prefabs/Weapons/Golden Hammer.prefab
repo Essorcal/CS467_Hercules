@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4461032594458726}
   - component: {fileID: 212037004640825998}
   - component: {fileID: 60071468161380174}
+  - component: {fileID: 114500242687401676}
   m_Layer: 0
   m_Name: Golden Hammer
   m_TagString: Untagged
@@ -71,6 +72,17 @@ PolygonCollider2D:
       - {x: 0.12954654, y: 0.3186803}
       - {x: 0.11070131, y: 0.29939783}
       - {x: 0.14207624, y: 0.24950713}
+--- !u!114 &114500242687401676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404802127929412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212037004640825998
 SpriteRenderer:
   m_ObjectHideFlags: 1

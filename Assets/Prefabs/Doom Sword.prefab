@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 95174801488184040}
   - component: {fileID: 58388403204493854}
   - component: {fileID: 61049502622708322}
+  - component: {fileID: 114850549640945476}
+  - component: {fileID: 114426146102050750}
   m_Layer: 10
   m_Name: Doom Sword
   m_TagString: Enemy
@@ -122,6 +124,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114426146102050750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276475609088296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c628dc68deadd204e890812059f5ae51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDefinition_Template: {fileID: 11400000, guid: 45a2fdf55add5d34ba90c2df8492d01e,
+    type: 2}
+  characterDefinition: {fileID: 0}
+  characterWeaponSlot: {fileID: 0}
+--- !u!114 &114850549640945476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276475609088296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df05b33003d5a894f9dbb8a5013cb400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTime: 5
+  aggroRange: 3
+  spellAudio: {fileID: 0}
+  OnEnemyDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+EventEnemyDeath, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  inView: 0
+  attack: {fileID: 11400000, guid: ed4c80bb67e0fe349a0b211dd73632f7, type: 2}
+  walkSpeed: 2
+  currentWaypoint: {fileID: 0}
+  runSpeedMultiplier: 1.05
+  attackDistance: 1.25
 --- !u!212 &212548048117236786
 SpriteRenderer:
   m_ObjectHideFlags: 1

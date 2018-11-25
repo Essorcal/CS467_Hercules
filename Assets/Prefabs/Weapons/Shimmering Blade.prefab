@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4984509871849026}
   - component: {fileID: 212508673742890796}
   - component: {fileID: 60285097170341798}
+  - component: {fileID: 114378921979694808}
   m_Layer: 0
   m_Name: Shimmering Blade
   m_TagString: Untagged
@@ -71,6 +72,17 @@ PolygonCollider2D:
       - {x: -0.10004324, y: 0.10964608}
       - {x: -0.091778114, y: 0.13269798}
       - {x: -0.27381524, y: 0.31228164}
+--- !u!114 &114378921979694808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1022312646484726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212508673742890796
 SpriteRenderer:
   m_ObjectHideFlags: 1

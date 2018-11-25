@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4507359169032730}
   - component: {fileID: 212698239567945064}
   - component: {fileID: 60597680975383126}
+  - component: {fileID: 114878087240380732}
   m_Layer: 0
   m_Name: Lifehammer
   m_TagString: Untagged
@@ -71,6 +72,17 @@ PolygonCollider2D:
       - {x: -0.22228159, y: 0.23843056}
       - {x: -0.18435037, y: 0.27583084}
       - {x: -0.22766106, y: 0.32082582}
+--- !u!114 &114878087240380732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264815465507348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212698239567945064
 SpriteRenderer:
   m_ObjectHideFlags: 1

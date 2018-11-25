@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 95207707804538820}
   - component: {fileID: 70841401301135634}
   - component: {fileID: 61084269052366180}
+  - component: {fileID: 114720836191680054}
+  - component: {fileID: 114832664513109932}
   m_Layer: 10
   m_Name: Wolf
   m_TagString: Enemy
@@ -122,6 +124,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114720836191680054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206240384860756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df05b33003d5a894f9dbb8a5013cb400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTime: 5
+  aggroRange: 3
+  spellAudio: {fileID: 0}
+  OnEnemyDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+EventEnemyDeath, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  inView: 0
+  attack: {fileID: 11400000, guid: 872e195038fef2742a78acd9a68bdfff, type: 2}
+  walkSpeed: 2
+  currentWaypoint: {fileID: 0}
+  runSpeedMultiplier: 1.05
+  attackDistance: 1.25
+--- !u!114 &114832664513109932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206240384860756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c628dc68deadd204e890812059f5ae51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDefinition_Template: {fileID: 11400000, guid: a1762c3bf4ea7414cb6ee42fbbfe29e5,
+    type: 2}
+  characterDefinition: {fileID: 0}
+  characterWeaponSlot: {fileID: 0}
 --- !u!212 &212341313939957484
 SpriteRenderer:
   m_ObjectHideFlags: 1

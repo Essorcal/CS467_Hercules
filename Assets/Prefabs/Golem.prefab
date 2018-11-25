@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 61302101667797732}
   - component: {fileID: 70590130614872530}
   - component: {fileID: 114620788672660926}
-  - component: {fileID: 114415175963449832}
+  - component: {fileID: 114683588685400910}
   m_Layer: 10
   m_Name: Golem
   m_TagString: Enemy
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -169,22 +169,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114415175963449832
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1951788312821962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cf1628cb05042dd9e0620576db056d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterDefinition_Template: {fileID: 11400000, guid: 4a1ca5a59a6148448b298694a2039cd8,
-    type: 2}
-  characterDefinition: {fileID: 0}
-  charInv: {fileID: 0}
-  characterWeaponSlot: {fileID: 0}
 --- !u!114 &114620788672660926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,11 +189,26 @@ MonoBehaviour:
     m_TypeName: Events+EventEnemyDeath, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   inView: 0
-  attack: {fileID: 0}
+  attack: {fileID: 11400000, guid: d0838b5600a8d7f43b291ff40cf797d8, type: 2}
   walkSpeed: 2
   currentWaypoint: {fileID: 0}
   runSpeedMultiplier: 1.05
   attackDistance: 1.25
+--- !u!114 &114683588685400910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951788312821962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c628dc68deadd204e890812059f5ae51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDefinition_Template: {fileID: 11400000, guid: 4a1ca5a59a6148448b298694a2039cd8,
+    type: 2}
+  characterDefinition: {fileID: 0}
+  characterWeaponSlot: {fileID: 0}
 --- !u!212 &212985386559127640
 SpriteRenderer:
   m_ObjectHideFlags: 1

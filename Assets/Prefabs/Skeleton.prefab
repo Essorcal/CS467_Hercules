@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 95079999732562082}
   - component: {fileID: 70272335293651464}
   - component: {fileID: 61891765629524814}
+  - component: {fileID: 114435872707867864}
+  - component: {fileID: 114064636512395654}
   m_Layer: 10
   m_Name: Skeleton
   m_TagString: Enemy
@@ -122,6 +124,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114064636512395654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1668998631700066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c628dc68deadd204e890812059f5ae51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDefinition_Template: {fileID: 11400000, guid: b18a40e621ce032479b7f2b2e386331f,
+    type: 2}
+  characterDefinition: {fileID: 0}
+  characterWeaponSlot: {fileID: 0}
+--- !u!114 &114435872707867864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1668998631700066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df05b33003d5a894f9dbb8a5013cb400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTime: 5
+  aggroRange: 3
+  spellAudio: {fileID: 0}
+  OnEnemyDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+EventEnemyDeath, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  inView: 0
+  attack: {fileID: 11400000, guid: 9b607bc02b69bfc44b739df896f926bb, type: 2}
+  walkSpeed: 2
+  currentWaypoint: {fileID: 0}
+  runSpeedMultiplier: 1.05
+  attackDistance: 1.25
 --- !u!212 &212469552557685472
 SpriteRenderer:
   m_ObjectHideFlags: 1

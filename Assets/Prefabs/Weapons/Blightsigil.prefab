@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4553866795383894}
   - component: {fileID: 212874456848677752}
   - component: {fileID: 60923555965923922}
+  - component: {fileID: 114682319345753800}
   m_Layer: 0
   m_Name: Blightsigil
   m_TagString: Untagged
@@ -73,6 +74,17 @@ PolygonCollider2D:
       - {x: -0.025237259, y: 0.051304936}
       - {x: 0.1386564, y: 0.21667232}
       - {x: 0.17555447, y: 0.21438643}
+--- !u!114 &114682319345753800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304586147711222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536ea59e1234aeb4fb6fd8bc577af082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212874456848677752
 SpriteRenderer:
   m_ObjectHideFlags: 1

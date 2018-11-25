@@ -7,15 +7,14 @@ public class AttackSystem : ScriptableObject
 {
     public float Cooldown;
 
-    public float Range;
     public float minDamage;
     public float maxDamage;
     public float critMult;
     public float critChance;
 
-    public Attack CreateAttack(CharacterStats attackerStats, CharacterStats defenderStats)
+    public Attack CreateAttack(CharacterStats_SO attackerStats)
     {
-        float baseHit = attackerStats.characterDefinition.baseDamage;
+        float baseHit = attackerStats.baseDamage;
         baseHit += Random.Range(minDamage, maxDamage);
 
         bool isCrit = Random.value < critChance;
