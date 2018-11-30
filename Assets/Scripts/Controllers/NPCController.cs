@@ -53,8 +53,6 @@ public class NPCController : MonoBehaviour {
         body = GetComponent<Rigidbody2D>();
         bodyCollider = GetComponent<CapsuleCollider2D>();
 
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
         enemyManager = FindObjectOfType<EnemyManager>();
       
         
