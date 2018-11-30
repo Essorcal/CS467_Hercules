@@ -25,6 +25,11 @@ public class LevelExit : MonoBehaviour {
                 if (levelToLoad == "Game.MainScene")
                 {
                     CountdownTimer.instance.StopTimer();
+                    if ((GameController.control.twilightPortalStatus == 3) && (GameController.control.voidPortalStatus == 1) && (GameController.control.plasmaPortalStatus == 1))
+                    {
+                        GameMenu.instance.blur.SetActive(true);
+                        GameMenu.instance.winScreen.SetActive(true);
+                    }
                 }
             }
         }
