@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour {
     public int bossesKilled;
     public bool gameWon;
     public bool canEnterPortal = false;
+    public int characterGender;
 
     //Spawn Enemies
     public int currentEnemyCount = 0;
@@ -217,22 +218,22 @@ public class GameController : MonoBehaviour {
 
     public void Save()
     {
-        BinaryFormatter bf = new BinaryFormatter();
+                BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/gameInfo.dat");
 
         GameData data = new GameData
         {
-            playerHealth = playerStats.GetCurrentHealth(),
-            playerSanity = playerStats.GetCurrentSanity(),
-            playerLvl = playerStats.GetLevel(),
-            playerXP = playerStats.GetXP(),
-            voidPortalStatus = voidPortalStatus,
-            plasmaPortalStatus = plasmaPortalStatus,
-            twilightPortalStatus = twilightPortalStatus,
+            characterGender = CharacterSelector.instance.characterChoice,
+            playerHealth = PlayerController.instance.currentStats.currentHealth,
+            playerSanity = PlayerController.instance.currentStats.currentSanity,            
+            playerLvl = PlayerController.instance.currentStats.charLevel,
+            playerXP = PlayerController.instance.currentStats.charExperience,
+            voidPortalStatus = control.voidPortalStatus,
+            plasmaPortalStatus = control.plasmaPortalStatus,
+            twilightPortalStatus = control.twilightPortalStatus,
             gemsCollected = gemsCollected,
-            gameWon = gameWon
-        
-    };
+            gameWon = gameWon,
+        };
 
         bf.Serialize(file, data);
         file.Close();
@@ -247,8 +248,20 @@ public class GameController : MonoBehaviour {
             GameData data = (GameData)bf.Deserialize(file);
             file.Close();
 
-            playerStats.characterDefinition.currentHealth = data.playerHealth;
-            playerStats.characterDefinition.currentSanity = data.playerSanity;
+            SceneManager.LoadScene(1);
+            if (data.characterGender == 0)
+            {
+                CharacterSelector.instance.characterChoice = 0;
+                CharacterSelector.instance.InstantiateCharacter();
+            }
+            else
+            {
+                CharacterSelector.instance.characterChoice = 1;
+                CharacterSelector.instance.InstantiateCharacter();
+            }
+
+            PlayerController.instance.currentStats.currentHealth = data.playerHealth;
+            PlayerController.instance.currentStats.currentSanity = data.playerSanity;
             //playerStats.characterDefinition.baseDamage
             voidPortalStatus = data.voidPortalStatus;
             plasmaPortalStatus = data.plasmaPortalStatus;
@@ -387,4 +400,5 @@ class GameData
     public int twilightPortalStatus;
     public int plasmaPortalStatus;
     public bool gameWon;
+    public int characterGender;
 }

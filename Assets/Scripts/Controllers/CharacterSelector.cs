@@ -10,7 +10,7 @@ public class CharacterSelector : MonoBehaviour
     public GameObject[] playerOptions;
     public Vector3 spawnPos = new Vector3(.004f, .004f, -0.04801377f);
     public static CharacterSelector instance;
-    int characterChoice;
+    public int characterChoice;
     public string scene;
 
     void Start()
@@ -31,7 +31,7 @@ public class CharacterSelector : MonoBehaviour
 
     public void SelectCharacter(int choice)
     {
-        characterChoice = choice;
+        characterChoice = choice;        
     }
 
     public void LoadScene()
