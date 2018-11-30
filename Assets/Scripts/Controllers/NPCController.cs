@@ -67,7 +67,6 @@ public class NPCController : MonoBehaviour {
     void Start()
     {
         currentStats = GetComponent<EnemyStats>().characterDefinition;
-        playerStats = GameObject.FindWithTag("Player").GetComponent<CharacterStats>().characterDefinition;
         attack = gameObject.GetComponent<NPCController>().attack;
     }
 
@@ -76,6 +75,10 @@ public class NPCController : MonoBehaviour {
         if (!playerStats && PlayerController.instance)
         {
             playerStats = GameObject.FindWithTag("Player").GetComponent<CharacterStats>().characterDefinition;
+        }
+        if (!playerTransform && PlayerController.instance)
+        {
+            playerTransform = GameObject.FindWithTag("Player").transform;
         }
 
         if (currentStats == null)
