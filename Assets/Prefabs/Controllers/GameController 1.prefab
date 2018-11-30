@@ -143,6 +143,7 @@ MonoBehaviour:
   bossesKilled: 0
   gameWon: 0
   canEnterPortal: 0
+  characterGender: 0
   currentEnemyCount: 0
   cheatAnim: {fileID: 1000012744717210, guid: 8b447c51d7b8df24382dbca3c3d45ca7, type: 2}
   delay: 0
