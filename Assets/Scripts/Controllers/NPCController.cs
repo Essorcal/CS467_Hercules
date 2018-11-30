@@ -75,6 +75,11 @@ public class NPCController : MonoBehaviour {
 
     void Update()
     {
+        if (!playerStats && PlayerController.instance)
+        {
+            playerStats = GameObject.FindWithTag("Player").GetComponent<CharacterStats>().characterDefinition;
+        }
+
         if (currentStats == null)
         {
             print("currentStats is null");
