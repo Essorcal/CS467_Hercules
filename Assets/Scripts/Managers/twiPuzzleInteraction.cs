@@ -6,13 +6,14 @@ public class twiPuzzleInteraction : MonoBehaviour {
 
     ParticleSystem[] ps;
     public int sfxSource;
-    GameObject exitPortal;
+    public GameObject exitPortal;
     public Spawn bossSpawn;
     public GameObject bossToSpawn;
 
     private void Awake()
     {
-        exitPortal = GameObject.Find("Twilight_Portal_Exit");
+        if(!exitPortal)
+            exitPortal = GameObject.Find("Twilight_Portal_Exit");
         if(exitPortal && GameController.control.twilightPortalStatus != 3)
             exitPortal.SetActive(false);
     }
