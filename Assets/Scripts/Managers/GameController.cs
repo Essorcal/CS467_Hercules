@@ -272,8 +272,28 @@ public class GameController : MonoBehaviour {
             twilightPortalStatus = data.twilightPortalStatus;
             gameWon = data.gameWon;
             gemsCollected = data.gemsCollected;
-           
+
+            loadPortalData();
         }
+    }
+
+    void loadPortalData()
+    {
+        GetPortalList();
+        GetPortalNames();
+        for(int i = 0; i < portalNames.Count; i++)
+        {
+            if ("Twilight".IndexOf(portalNames[i]) > 0 && twilightPortalStatus > 0)
+                portalNames.RemoveAt(i);
+            if ("Plasma".IndexOf(portalNames[i]) > 0 && plasmaPortalStatus > 0)
+                portalNames.RemoveAt(i);
+            if ("Void".IndexOf(portalNames[i]) > 0 && voidPortalStatus > 0)
+                portalNames.RemoveAt(i);
+        }
+        DisablePortals();
+        currentEnemyCount = 0;
+        currentPortalCompleted = true;
+        canEnterPortal = true;
     }
 
     public Item GetItemInfo(string item)
