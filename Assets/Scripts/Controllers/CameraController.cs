@@ -32,7 +32,10 @@ public class CameraController : MonoBehaviour {
 
     // LateUpdate is called once per frame, but it guaranteed to run after all items have been processed in update.
     void LateUpdate() {
-
+        if (!playerAnchor && PlayerController.instance)
+        {
+            playerAnchor = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         if (!musicStarted)
         {
             musicStarted = true;

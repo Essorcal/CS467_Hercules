@@ -63,8 +63,7 @@ public class GameController : MonoBehaviour {
 	}
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
+        
         enemyManager = FindObjectOfType<EnemyManager>();
         SceneManager.sceneLoaded += OnSceneLoaded;                              //Register the OnSceneLoaded with the SceneManager sceneLoaded events handler
         GetPortalList();
@@ -74,6 +73,12 @@ public class GameController : MonoBehaviour {
 
     void Update()
     {
+        if (!player && PlayerController.instance)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
+        }
+
         GameMenu.instance.SetItemButtons();
         if (Input.GetKeyDown(KeyCode.J))
         {
@@ -82,7 +87,11 @@ public class GameController : MonoBehaviour {
 
             //RemoveItem("Sanity Potion");
         }
-
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            playerStats.characterDefinition.currentHealth = 0;
+            PlayerController.instance.isAlive = false;
+        }
         if (Input.GetKeyDown(KeyCode.O))
         {
             playerStats.characterDefinition.maxHealth = 10000;

@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66dad34abdab4802bad4b206c7732b7, type: 3}
+  m_Name: femaleStats
+  m_EditorClassIdentifier: 
+  animController: {fileID: 0}
+  sprite: {fileID: 21300310, guid: d5e5f487823758b4fa72fe592cb9eceb, type: 3}
+  isPlayer: 1
+  charLevel: 1
+  charName: 
+  maxHealth: 100
+  currentHealth: 100
+  maxGems: 10000
+  currentGems: 0
+  maxSanity: 100
+  currentSanity: 100
+  baseDamage: 10
+  currentDamage: 10
+  maxInventory: 10
+  currentInventory: 0
+  charExperience: 0
+  charLevels:
+  - maxHealth: 100
+    maxSanity: 100
+    maxGems: 10000
+    baseDamage: 10
+    requiredXP: 0
+  - maxHealth: 100
+    maxSanity: 100
+    maxGems: 10000
+    baseDamage: 10
+    requiredXP: 0
+  - maxHealth: 105
+    maxSanity: 105
+    maxGems: 10000
+    baseDamage: 11
+    requiredXP: 25
+  - maxHealth: 110
+    maxSanity: 110
+    maxGems: 10000
+    baseDamage: 11
+    requiredXP: 50
+  - maxHealth: 115
+    maxSanity: 110
+    maxGems: 10000
+    baseDamage: 12
+    requiredXP: 100
+  - maxHealth: 120
+    maxSanity: 110
+    maxGems: 10000
+    baseDamage: 13
+    requiredXP: 150
+  - maxHealth: 125
+    maxSanity: 115
+    maxGems: 10000
+    baseDamage: 14
+    requiredXP: 200
+  - maxHealth: 130
+    maxSanity: 120
+    maxGems: 10000
+    baseDamage: 15
+    requiredXP: 300
+  - maxHealth: 140
+    maxSanity: 125
+    maxGems: 10000
+    baseDamage: 17
+    requiredXP: 500
+  - maxHealth: 145
+    maxSanity: 130
+    maxGems: 10000
+    baseDamage: 19
+    requiredXP: 750
+  - maxHealth: 150
+    maxSanity: 130
+    maxGems: 10000
+    baseDamage: 20
+    requiredXP: 1000
