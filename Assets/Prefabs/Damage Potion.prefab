@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4524630549339710}
   - component: {fileID: 114963046007411222}
   - component: {fileID: 212926215877915816}
+  - component: {fileID: 61938838959809514}
+  - component: {fileID: 114419269602511536}
   m_Layer: 12
   m_Name: Damage Potion
   m_TagString: Untagged
@@ -35,12 +37,48 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133042474168462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.539608, y: 3.452976, z: -0.672198}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -9.226695, y: -3.9547565, z: -0.672198}
+  m_LocalScale: {x: 0.06440131, y: 0.06440131, z: 0.06440131}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61938838959809514
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133042474168462}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+  m_EdgeRadius: 0
+--- !u!114 &114419269602511536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133042474168462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c56d116c425cb458840a7b6e28bacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114963046007411222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,9 +94,9 @@ MonoBehaviour:
   isWeapon: 0
   itemName: Damage Potion
   description: Increases Damage by 10
-  value: 10
+  value: 5
   itemSprite: {fileID: 21300000, guid: d318988fe7a598842b25a3a91f320d67, type: 3}
-  amountToChange: 10
+  amountToChange: 5
   affectHP: 0
   affectSanity: 0
   affectDMG: 1

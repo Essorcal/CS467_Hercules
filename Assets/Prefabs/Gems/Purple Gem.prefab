@@ -111,19 +111,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isItem: 1
   isWeapon: 0
-  isArmor: 0
   itemName: Purple Gem
-  description: Epic Gem
-  value: 25
+  description: 'USE: +5 Health | +5 Sanity'
+  value: 5
   itemSprite: {fileID: 21300000, guid: 5dba36785220fbf4785a4deca87ff08d, type: 3}
-  amountToChange: 25
-  affectHP: 0
-  affectSanity: 0
+  amountToChange: 5
+  affectHP: 1
+  affectSanity: 1
   affectDMG: 0
   affectGems: 1
-  weapStrength: 0
-  weapRange: 0
-  armorValue: 0
 --- !u!212 &212546238824417360
 SpriteRenderer:
   m_ObjectHideFlags: 1

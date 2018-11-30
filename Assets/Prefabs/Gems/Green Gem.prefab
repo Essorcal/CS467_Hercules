@@ -100,19 +100,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isItem: 1
   isWeapon: 0
-  isArmor: 0
   itemName: Green Gem
-  description: Uncommon Gem
+  description: 'USE: +5 Health'
   value: 5
   itemSprite: {fileID: 21300000, guid: 90dcbdb8cdedac749a821ecfeb0d4e54, type: 3}
   amountToChange: 5
-  affectHP: 0
+  affectHP: 1
   affectSanity: 0
   affectDMG: 0
   affectGems: 1
-  weapStrength: 0
-  weapRange: 0
-  armorValue: 0
 --- !u!114 &114786346269364424
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -111,19 +111,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isItem: 1
   isWeapon: 0
-  isArmor: 0
   itemName: Red Gem
-  description: Rare Gem
-  value: 10
+  description: 'USE: +5 Damage'
+  value: 5
   itemSprite: {fileID: 21300000, guid: cb58eb9dc0da77444b4bbeab15a1fa05, type: 3}
-  amountToChange: 10
+  amountToChange: 5
   affectHP: 0
   affectSanity: 0
-  affectDMG: 0
+  affectDMG: 1
   affectGems: 1
-  weapStrength: 0
-  weapRange: 0
-  armorValue: 0
 --- !u!212 &212546238824417360
 SpriteRenderer:
   m_ObjectHideFlags: 1
