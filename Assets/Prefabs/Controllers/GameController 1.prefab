@@ -97,6 +97,11 @@ MonoBehaviour:
   - {fileID: 114963046007411222, guid: 955f6d86f526d654e98912ca839fe0e1, type: 2}
   - {fileID: 114784170642567616, guid: f2adba529d447ec4da326f063df1114c, type: 2}
   - {fileID: 114532428644851008, guid: 27209ac9dfdd8e848996c582c2c51422, type: 2}
+  - {fileID: 114966786052092234, guid: e3c866990350eb449b9dd82385a42aca, type: 2}
+  - {fileID: 114061116879948356, guid: 1fb7192ba890c974d8db67bdf06a2e15, type: 2}
+  - {fileID: 114993265960374074, guid: 7babcf6597fb8b14cb72954fe57c3c88, type: 2}
+  - {fileID: 114244425064621226, guid: b2913892d27ee4e478609cfcc625bc89, type: 2}
+  - {fileID: 114449499367059496, guid: 1df197c421a50a54c942d8b7b64a8602, type: 2}
   refWeapons:
   - {fileID: 11400000, guid: da8bb31ef25734a48803baacbe77e0c8, type: 2}
   - {fileID: 11400000, guid: f0747c7a4753e6c4d9f3136816f931dd, type: 2}

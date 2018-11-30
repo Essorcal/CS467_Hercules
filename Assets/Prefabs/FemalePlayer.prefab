@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4820843590800776}
   - component: {fileID: 114312420239191794}
-  - component: {fileID: 114672731630975632}
   - component: {fileID: 114723131095279854}
   - component: {fileID: 212993746392460798}
   - component: {fileID: 95161686601211758}
@@ -158,9 +157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelTransitionName: 
   runSpeedMultiplier: 1.05
-  maxSpeed: 1.5
-  attackTime: 1
-  originSpeed: 1
+  maxSpeed: 2
+  attackTime: 0.8
+  originSpeed: 1.1
   isAlive: 1
   canMove: 1
   weapon: {fileID: 114429838575276026}
@@ -182,24 +181,6 @@ MonoBehaviour:
   player: {fileID: 1688244169992594}
   damageAnim: {fileID: 1931949328551712, guid: 5fa370cdc476b714aa7fac9902d179ee, type: 2}
   delay: 0
---- !u!114 &114672731630975632
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1688244169992594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 831059712bae0934aba3251f8579dada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0.8
-  attackPos: {fileID: 4627206023773724}
-  findEnemies:
-    serializedVersion: 2
-    m_Bits: 1024
-  attackRange: 5
-  damage: 10
 --- !u!114 &114723131095279854
 MonoBehaviour:
   m_ObjectHideFlags: 1

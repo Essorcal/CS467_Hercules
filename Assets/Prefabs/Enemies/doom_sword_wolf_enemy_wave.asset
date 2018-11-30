@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11af5d7c08a2744d681e56e99ccef4f0, type: 3}
   m_Name: doom_sword_wolf_enemy_wave
   m_EditorClassIdentifier: 
-  EnemyNumber: 15
+  EnemyNumber: 8
   Enemies:
   - {fileID: 1276475609088296, guid: 039b0d2a89e580448892081f95fa6443, type: 2}
   - {fileID: 1206240384860756, guid: 932806e3f4cb9a5438770051d6e0ed05, type: 2}

@@ -11,7 +11,7 @@ public class CountdownTimer : MonoBehaviour {
 
     public float timeLeft = 300.0f;
     private double sanityLoss =  0f;
-    private float lossMult = .35f;
+    private float lossMult = .5f;
     public bool stop;
 
     private float minutes;

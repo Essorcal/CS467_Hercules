@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11af5d7c08a2744d681e56e99ccef4f0, type: 3}
   m_Name: alien_orc_enemy_wave
   m_EditorClassIdentifier: 
-  EnemyNumber: 10
+  EnemyNumber: 5
   Enemies:
   - {fileID: 1484740632465448, guid: 1cfec4072a38df5488f2698e4dd64fc7, type: 2}
   - {fileID: 1363256365777034, guid: 60fd2e705aa27954da0212c2fe7732f4, type: 2}
