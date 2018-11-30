@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11af5d7c08a2744d681e56e99ccef4f0, type: 3}
   m_Name: skeleton_wolf_enemy_wave
   m_EditorClassIdentifier: 
-  EnemyNumber: 20
+  EnemyNumber: 5
   Enemies:
   - {fileID: 1668998631700066, guid: ced80b156a8dcc44e831979c3cff82bb, type: 2}
   - {fileID: 1206240384860756, guid: 932806e3f4cb9a5438770051d6e0ed05, type: 2}

@@ -50,7 +50,7 @@ public class EnemyManager : MonoBehaviour
 
         activeEnemies -= 1;
         gameController = FindObjectOfType<GameController>();
-        gameController.currentEnemyCount = activeEnemies;
+        gameController.currentEnemyCount -= 1;
     }
 
     private GameObject selectRandomEnemy(int currentWave)

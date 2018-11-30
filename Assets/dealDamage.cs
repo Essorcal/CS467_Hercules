@@ -15,15 +15,7 @@ public class dealDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (PlayerController.instance.GetComponent<CapsuleCollider2D>().IsTouchingLayers(LayerMask.GetMask("Spikes")) && canDamage)
-        {
-            if (PlayerController.instance.isAlive == true) //make sure sfx only plays once
-            {
-                AudioManager.Instance.PlaySFX(1);
-            }
-            PlayerController.instance.takeDamage(30);
-            canDamage = false;
-        }
+
 
         if (!canDamage)
         {
@@ -33,6 +25,19 @@ public class dealDamage : MonoBehaviour {
                 canDamage = true;
                 timeLeft = stormTimer;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (canDamage)
+        {
+            if (PlayerController.instance.isAlive == true) //make sure sfx only plays once
+            {
+                AudioManager.Instance.PlaySFX(9);
+            }
+            PlayerController.instance.takeDamage(30);
+            canDamage = false;
         }
     }
 }
