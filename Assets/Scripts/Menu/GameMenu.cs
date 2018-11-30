@@ -125,11 +125,10 @@ public class GameMenu : MonoBehaviour {
         if (activeItem.isItem)
         {
             DiscardItem();
-        }
-        else
-        {
+
+        }       
             activeItem = null;
-        }
+        
             
       
     
