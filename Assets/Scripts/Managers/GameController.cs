@@ -70,6 +70,7 @@ public class GameController : MonoBehaviour {
         GetPortalList();
         GetPortalNames();
         DisablePortals();
+        canEnterPortal = true;
     }
 
     void Update()
@@ -103,10 +104,13 @@ public class GameController : MonoBehaviour {
             Destroy(_instance, _instance.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
         }
 
-            if (mainScene)
+        if (mainScene)
         {
             if (currentEnemyCount <= 0 && !canEnterPortal)
+            {
                 canEnterPortal = true;
+                AudioManager.Instance.PlaySFX(10);
+            }
 
             if(currentEnemyCount <= 0 && currentPortalCompleted && portalsCompleted < 3)  //Attempt to spawn a new wave
             {

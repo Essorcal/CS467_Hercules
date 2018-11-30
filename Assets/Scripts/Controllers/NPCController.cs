@@ -105,15 +105,6 @@ public class NPCController : MonoBehaviour {
         playerStats.charExperience += gameObject.GetComponent<EnemyStats>().experiencePoints;
         Destroy(gameObject);
     }
-
-    //Uncomment this function to test portal spawning by deleting enemies in the scene
-    /**/
-    private void OnDestroy()
-    {
-        if(enemyManager)
-            enemyManager.OnEnemyDeath();
-    }
-    /**/
     
 
     private void PlayerDeath()
